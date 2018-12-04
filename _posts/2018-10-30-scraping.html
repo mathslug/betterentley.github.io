@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Web Scraping Project"
+subtitle: "Scraping the Arduino Project Hub"
+date:   2018-10-30 23:45:13 -0400
+background: '/img/posts/scrape.jpg'
+---
+
+
+
+
+
+<h1 id="scraping-arduino-project-hub">Scraping Arduino Project Hub</h1>
+<h2 id="the-idea">The Idea</h2>
+<p>Arduino makes open source hardware and software (especially microcontrollers) for educational and prototyping purposes. Most people who know me know that I love playing with my Arduinos and Raspberry Pi. I&#39;ve never really wanted to be an electrical engineer - I&#39;m in it more for the coding and the artistic factor, but the tactile element of <em>building</em> something and the satisfaction of seeing your code come to life can hardly be overstated.</p>
+<p>Arduino has a website where developers can host their code and designs. Other users can comments and pay &quot;respects&quot;. It&#39;s called the Arduino <a href="https://create.arduino.cc/projecthub">Project Hub</a>.</p>
+<p><img src="/img/posts/projecthub.png" alt="Screenshot of Project Hub"></p>
+<p>I have always been a little scared to post my projects to the official project hub, opting instead to leave the code on github and post about my favorite projects here. Most projects on the Arduino hub seem very well-built and garner many &quot;views&quot; and &quot;respects&quot; (equivalent to &quot;likes&quot;). In addition, many are published by veteran creators with many followers.</p>
+<p><img src="/img/posts/arduinoauthor.png" alt="Arduino Author Example"></p>
+<p>I wanted to hone my web-scraping skills, so I created a program to pull data on every project on the hub. I then tried to analyze the data I pulled to see if I could use any of the data to predict how well a project would do, defined as the ratio of how many people &quot;respect&quot; the project to how many people viewed it in total. I pulled each project&#39;s &quot;tags&quot; as well.</p>
+<p><img src="/img/posts/projectcard.png" alt="Project Card Example"></p>
+<h2 id="the-project">The Project</h2>
+<p>I used scrapy to scrape the entire site. Scrapy is very easy to use for simple sites like this. First, you identify the html tags associated with the element you are trying to pull from each project page. The tag ordered list is called the xpath. You can tell scrapy to pull a similar xpath (they may not be exactly identical so regular expressions come in handy) from each project page. It was very easy to use Chrome developer tools to find the xpath of the elements I wanted to pull, and the site design allowed me to quickly access all of the project pages sequentially thanks to an intuitive page-numering schema.</p>
+<p><a href="https://github.com/mathSlug/arduinoScrape">Check out the code repo.</a></p>
+<p>For fun, I built a simple linear regression to help me to determine if how many followers a creator has affects the amount of respects per view that their projects receive. I made a shiny app that takes the user through the process of a multiple linear regression:</p>
+<ul>
+<li><p>from data exploration,<br><p></p><img src="/img/posts/dataexploration.png" alt="from data exploration,"></p>
+</li>
+<li><p>to feature selection using variance inflation factor analysis (to help reduce multicolinearity),<br><p></p><img src="/img/posts/modelselect.png" alt="to feature selection,"></p>
+</li>
+<li><p>and prediction using the model you just built.<br><p></p><img src="/img/posts/arduinopredict.png" alt="and prediction"></p>
+</li>
+</ul>
+<p>I found little relationship between the ratio of respects per view of a project and its creator status, though veteran creators did receive more views. Check out the <a href="https://mathslug.shinyapps.io/arduinoAnalysis/">shiny app</a> for yourself. Of course, there are other ML tecquniques we could try besides regression, but the data exploration stage does not lead me to have high hopes that there is much of a relationship to be found.</p>
+<p>Given these results, I may decide to post some of my projects after all! It seems like the community is very welcoming to newcomers, since I am not able to reject the null hypothesis that there is no correlation between how experienced a developer you are and your project&#39;s &quot;respect ratio&quot;.</p>

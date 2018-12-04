@@ -1,2 +1,12 @@
 // Import Core Clean Blog SCSS
 @import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
+
+a {
+    color: $blue;
+    font-size: 24px;
+    text-decoration: none;
+      cursor: pointer;
+    &:hover, &:active {
+      color: $black;
+    }
+  }
