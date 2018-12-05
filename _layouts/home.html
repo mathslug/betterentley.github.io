@@ -30,8 +30,10 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
+        <u>
+          <h2 class="post-title">Recent Posts:</h2>
+        </u>
         {% for post in site.posts limit : 5 %}
-
           <article class="post-preview">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
               <h2 class="post-title">{{ post.title }}</h2>
@@ -55,10 +57,7 @@ layout: default
 
         {% endfor %}
 
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
+
 
       </div>
     </div>
