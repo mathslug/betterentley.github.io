@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8.5"
+gem "jekyll", "~> 4.1.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "jekyll-theme-clean-blog"
@@ -19,7 +19,7 @@ gem "jekyll-theme-clean-blog"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.15.0"
   gem "jekyll-paginate", "~> 1.1.0"
 end
 
@@ -27,9 +27,9 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "wdm", "~> 0.1.1" if Gem.win_platform?
 
 require 'rbconfig'
   if RbConfig::CONFIG['target_os'] =~ /darwin(1[0-3])/i
-    gem 'rb-fsevent', '<= 0.9.4'
+    gem 'rb-fsevent', '<= 0.10.4'
   end
