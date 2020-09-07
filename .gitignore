@@ -6,3 +6,4 @@ _site
 #JB added
 *.DS_Store
 *.Rhistory
+.jekyll-cache/*
