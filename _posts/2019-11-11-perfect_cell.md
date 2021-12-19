@@ -8,7 +8,7 @@ background: '/img/posts/red_rocks.png'
 
 # Why?
 
-I've had the same iPhone 5S since 2014. Why? It works fine and all phone design changes since the 5S have been negative. Phones are too big now, excessive cameras are obnoxious, and the obsession with the removal of bevels is manufactured to sell us upgrades we don't need -- phones look much worse with a notch or hole in the display for the front camera. In addition, the removal of the headphone jack, home button and fingerprint ID are objective Ls for the user that we must resist. Apple obviously made these changes to sell us more expensive junk or in the case of face ID to justify developing and testing privacy-disrespecting facial recognition.
+I've had the same iPhone 5S since 2014. It works fine and all phone design changes since the 5S have been negative. Phones are too big now, excessive cameras are obnoxious, and the obsession with the removal of bevels is manufactured to sell us upgrades we don't need -- phones look much worse with a notch or hole in the display for the front camera. In addition, the removal of the headphone jack, home button and fingerprint ID are objective Ls for the user that we must resist. Apple obviously made these changes to sell us more expensive junk or in the case of face ID to justify developing and testing privacy-disrespecting facial recognition.
 
 Unfortunately, AT&T has been sending me emails telling me that they're shutting down their 3G network (which the 5S apparently uses for normal phone stuff even though it uses 4G for data) and telling me that I **must** *buy* a new phone. The audacity.
 
