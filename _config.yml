@@ -25,7 +25,7 @@ github_username:  mathslug
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-clean-blog
+theme: jekyll-theme-slate
 paginate:          5
 paginate_path:     "/posts/page:num/"
 plugins:
