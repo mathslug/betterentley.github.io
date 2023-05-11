@@ -1,9 +1,1 @@
-# Jekyll defaults
-_site
-.sass-cache
-.jekyll-metadata
-
-#JB added
 *.DS_Store
-*.Rhistory
-.jekyll-cache/*
